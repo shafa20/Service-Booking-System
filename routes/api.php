@@ -14,6 +14,10 @@ Route::controller(AuthController::class)->group(function(){
 
 // Customer routes (token required)
 Route::middleware('auth:sanctum')->group(function () {
+    Route::get('me', [AuthController::class, 'me']); // Get current user
+    Route::post('logout', [AuthController::class, 'logout']); // Logout
+    Route::post('refresh', [AuthController::class, 'refresh']); // Refresh token
+
     Route::get('services', [ServiceController::class, 'index']); // List services
     Route::post('bookings', [BookingController::class, 'store']); // Create booking
     Route::get('bookings', [BookingController::class, 'index']); // My bookings

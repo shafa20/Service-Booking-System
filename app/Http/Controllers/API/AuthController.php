@@ -47,5 +47,28 @@ class AuthController extends BaseController
         ], 'User login successfully.');
     }
 
-   
+       // Get current authenticated user
+    public function me(Request $request): JsonResponse
+    {
+        return $this->sendResponse(new UserResource($request->user()), 'Authenticated user.');
+    }
+
+    // Logout (revoke current token)
+    public function logout(Request $request): JsonResponse
+    {
+        $request->user()->currentAccessToken()->delete();
+        return $this->sendResponse([], 'Logged out successfully.');
+    }
+
+    // Refresh token (revoke old and issue new)
+    public function refresh(Request $request): JsonResponse
+    {
+        $user = $request->user();
+        $user->currentAccessToken()->delete();
+        $token = $user->createToken('MyApp')->plainTextToken;
+        return $this->sendResponse([
+            'user' => new UserResource($user),
+            'token' => $token
+        ], 'Token refreshed successfully.');
+    }
 }
