@@ -7,54 +7,55 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About  Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Title:Service Booking System
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+A simple Laravel-based service booking system with RESTful APIs for customers and admin. Customers can login , register, view services, and make bookings. Admins also can login , register , manage services and view all bookings.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Features
+- Token Based Authentication
+- Customer Registration & Login 
+- Admin Login (seeded credentials)
+- Database seededer for admin and services
+- Service List (Customer)
+- Book a Service (Customer)
+- View Bookings (Customer & Admin)
+- Manage Services (Admin)
+- Laravel Sanctum Authentication
+- API Documentation (Postman Collection included)
+- Unit test
+- Proper Laravel naming conventions and RESTful design
+- Organized code with service, API Resource classes for clean response formatting and FormRequest for validation, 
+- Prevent booking a service on a past date.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Tech Stack
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Laravel 12
+- MySQL
+- Laravel Sanctum
+- Postman (for API Testing)
+- Xampp
+- Git
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+
 
 ## Installation Guide
 
-```bash
-# Open Git Bash/Terminal then write Following Command
+
+//Open Git Bash/Terminal then write Following Command
 
 git clone https://github.com/shafa20/Service-Booking-System.git
 cd service-booking
 composer install
 cp .env.example .env
 
-// inside .env file you can write this if you want to use same database (inside project db folder(path:..\service-booking\db) you will get my database file name service-booking.sql)
+// inside .env file you can write this if you want to use same database (inside project db folder(path:\service-booking\db) you will get my database file name service-booking.sql)
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -68,7 +69,7 @@ php artisan migrate
 # with migration Seed a few services and an admin user.
 php artisan migrate:fresh --seed
 php artisan serve
-```
+.....................
 //Test Api in Postman
 //Customer Credential
 "email": "john@example.com",
@@ -78,25 +79,21 @@ php artisan serve
 "email": "admin@admin.com",
 "password": "password"
 
-//Open Postman  login registration test
+
 
 //For API unit testing
 //Open Git Bash/Terminal then write Following Command for login registration test
 
 php artisan test --filter=AuthTest
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+//Open Git Bash/Terminal then write Following Command for customer and admin service and booking apis test
 
-## Code of Conduct
+php artisan test --filter=BookingServiceApiTest
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Author
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Hosain Mohammad Shafa Khan  
+Email: shafakhan2018@gmail.com 
+GitHub: [shafa20](https://github.com/shafa20)
