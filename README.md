@@ -70,6 +70,11 @@ php artisan migrate:fresh --seed
 php artisan serve
 ```
 
+//For API unit testing
+//Open Git Bash/Terminal then write Following Command for login registration test
+
+php artisan test --filter=AuthTest
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
