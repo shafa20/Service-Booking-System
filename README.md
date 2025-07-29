@@ -13,9 +13,6 @@ Title:Service Booking System
 
 A simple Laravel-based service booking system with RESTful APIs for customers and admin. Customers can login , register, view services, and make bookings. Admins also can login , register , manage services and view all bookings.
 
-
-
-
 ## Features
 - Token Based Authentication
 - Customer Registration & Login 
@@ -42,20 +39,18 @@ A simple Laravel-based service booking system with RESTful APIs for customers an
 - Xampp
 - Git
 
-
-
-
 ## Installation Guide
 
 
-//Open Git Bash/Terminal then write Following Command
+# Open Git Bash/Terminal then write Following Command
+# To Clone && Install Project
+1. git clone https://github.com/shafa20/Service-Booking-System.git                                                                     
+2. cd service-booking                         
+3. composer install
+# For .env setup  
+4. cp .env.example .env
 
-git clone https://github.com/shafa20/Service-Booking-System.git
-cd service-booking
-composer install
-cp .env.example .env
-
-// inside .env file you can write this if you want to use same database (inside project db folder(path:\service-booking\db) you will get my database file name service-booking.sql)
+# inside .env file you can write this 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -63,37 +58,40 @@ DB_DATABASE=service-booking
 DB_USERNAME=root
 DB_PASSWORD=
 
-php artisan key:generate
+if you want to use same database (inside project db folder(path:\service-booking\db) you will get my database file name service-booking.sql)
+
+# To Genarate Key
+5. php artisan key:generate
 # only migration
-php artisan migrate
+6. php artisan migrate
 # with migration Seed a few services and an admin user.
-php artisan migrate:fresh --seed
+7. php artisan migrate:fresh --seed
+# To Run Project.
 php artisan serve
-.....................
-//Test Api in Postman
-//Customer Credential
+
+# To Postman Check.
+# customer Credential.
 "email": "john@example.com",
 "password": "password"
 
-//Admin Credential
+# Admin Credential.
 "email": "admin@admin.com",
 "password": "password"
 
 
 
-//For API unit testing
-//Open Git Bash/Terminal then write Following Command for login registration test
+# For API unit testing
+# Open Git Bash/Terminal then run Following Command for login registration test
 
 php artisan test --filter=AuthTest
 
 
-//Open Git Bash/Terminal then write Following Command for customer and admin service and booking apis test
+# Open Git Bash/Terminal then run Following Command for customer and admin service and booking apis test
 
 php artisan test --filter=BookingServiceApiTest
 
 
 ## Author
-
 Hosain Mohammad Shafa Khan  
 Email: shafakhan2018@gmail.com 
 GitHub: [shafa20](https://github.com/shafa20)
