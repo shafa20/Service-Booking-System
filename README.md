@@ -44,6 +44,32 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[Redberry](https://redberry.international/laravel-development)**
 - **[Active Logic](https://activelogic.com)**
 
+## Installation Guide
+
+```bash
+# Open Git Bash/Terminal then write Following Command
+
+git clone https://github.com/shafa20/Service-Booking-System.git
+cd service-booking
+composer install
+cp .env.example .env
+
+// inside .env file you can write this if you want to use same database (inside project db folder(path:..\service-booking\db) you will get my database file name service-booking.sql)
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=service-booking
+DB_USERNAME=root
+DB_PASSWORD=
+
+php artisan key:generate
+# only migration
+php artisan migrate
+# with migration Seed a few services and an admin user.
+php artisan migrate:fresh --seed
+php artisan serve
+```
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
