@@ -69,6 +69,16 @@ php artisan migrate
 php artisan migrate:fresh --seed
 php artisan serve
 ```
+//Test Api in Postman
+//Customer Credential
+"email": "john@example.com",
+"password": "password"
+
+//Admin Credential
+"email": "admin@admin.com",
+"password": "password"
+
+//Open Postman  login registration test
 
 //For API unit testing
 //Open Git Bash/Terminal then write Following Command for login registration test
