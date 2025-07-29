@@ -13,9 +13,6 @@ Title:Service Booking System
 
 A simple Laravel-based service booking system with RESTful APIs for customers and admin. Customers can login , register, view services, and make bookings. Admins also can login , register , manage services and view all bookings.
 
-
-
-
 ## Features
 - Token Based Authentication
 - Customer Registration & Login 
@@ -42,14 +39,11 @@ A simple Laravel-based service booking system with RESTful APIs for customers an
 - Xampp
 - Git
 
-
-
-
 ## Installation Guide
 
 
-//Open Git Bash/Terminal then write Following Command
-# To Clone Project
+# Open Git Bash/Terminal then write Following Command
+# To Clone && Install Project
 1. git clone https://github.com/shafa20/Service-Booking-System.git                                                                     
 2. cd service-booking                         
 3. composer install
@@ -65,8 +59,8 @@ DB_USERNAME=root
 DB_PASSWORD=
 
 if you want to use same database (inside project db folder(path:\service-booking\db) you will get my database file name service-booking.sql)
-...........................
 
+# To Genarate Key
 5. php artisan key:generate
 # only migration
 6. php artisan migrate
@@ -74,8 +68,8 @@ if you want to use same database (inside project db folder(path:\service-booking
 7. php artisan migrate:fresh --seed
 # To Run Project.
 php artisan serve
-.....................
-# To Run Project.
+
+# To Postman Check.
 # customer Credential.
 "email": "john@example.com",
 "password": "password"
@@ -87,18 +81,17 @@ php artisan serve
 
 
 # For API unit testing
-# Open Git Bash/Terminal then write Following Command for login registration test
+# Open Git Bash/Terminal then run Following Command for login registration test
 
 php artisan test --filter=AuthTest
 
 
-# Open Git Bash/Terminal then write Following Command for customer and admin service and booking apis test
+# Open Git Bash/Terminal then run Following Command for customer and admin service and booking apis test
 
 php artisan test --filter=BookingServiceApiTest
 
 
 ## Author
-
 Hosain Mohammad Shafa Khan  
 Email: shafakhan2018@gmail.com 
 GitHub: [shafa20](https://github.com/shafa20)
