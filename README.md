@@ -73,6 +73,7 @@ php artisan serve
 # with below link download Postman Collection and Import to Postman
 https://drive.google.com/file/d/1iGC829PwkNc-ORvXZQxiPJG__3UzJB_q/view?usp=drive_link
 # Or also this project collection Folder postman collection included you can get collection from there then Import to Postman
+https://github.com/shafa20/Service-Booking-System/blob/master/collection/Service%20Booking%20API.postman_collection.json
 
 # customer Credential.
 "email": "john@example.com",
@@ -94,6 +95,11 @@ php artisan test --filter=AuthTest
 
 php artisan test --filter=BookingServiceApiTest
 
+# Sample screenshot
+# you can show screenshot from this link
+https://drive.google.com/drive/folders/1KxtEwqY9GVCoYO8M1MR4UUmisE5qZEJa?usp=sharing
+# Also i Have uploaded screenshot inside project sample screenshot folder you can see from there 
+https://github.com/shafa20/Service-Booking-System/tree/master/Sample%20Screenshots
 
 ## Author
 Hosain Mohammad Shafa Khan  
