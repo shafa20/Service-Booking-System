@@ -70,6 +70,10 @@ if you want to use same database (inside project db folder(path:\service-booking
 php artisan serve
 
 # To Postman Check.
+# with below link download Postman Collection and Import to Postman
+https://drive.google.com/file/d/1iGC829PwkNc-ORvXZQxiPJG__3UzJB_q/view?usp=drive_link
+# Or also this project collection Folder postman collection included you can get collection from there then Import to Postman
+
 # customer Credential.
 "email": "john@example.com",
 "password": "password"
